@@ -1,9 +1,8 @@
 import { Flex } from "components/UI/Flex";
-import { requests, baseURL } from "utils/constants";
 import { useEffect } from "react";
 import { useAppDispatch } from "store/hooks";
-import { getMovies } from "store/reducers/getMovies";
 import styled from "styled-components";
+import { getMovies } from "store/reducers/getMovies";
 
 export const AppWrapper = styled.div`
   width: 100%;
@@ -13,9 +12,11 @@ export const AppWrapper = styled.div`
 
 function App() {
   const dispatch = useAppDispatch();
+
   useEffect(() => {
-    dispatch(getMovies(baseURL + requests.fetchActionMovies));
+    dispatch(getMovies());
   }, [dispatch]);
+
   return (
     <AppWrapper>
       <Flex justify="center">Hello React</Flex>

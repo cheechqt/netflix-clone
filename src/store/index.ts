@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { NetflixSlice } from "store/NetflixSlice";
+import { MoviesSlice } from "store/MoviesSlice";
 
 export const store = configureStore({
   reducer: {
-    netflixApp: NetflixSlice.reducer
+    movies: MoviesSlice.reducer
   }
 });
 

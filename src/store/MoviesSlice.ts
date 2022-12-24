@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { MoviesInitialState } from "types";
+import { getMovies } from "./reducers/getMovies";
 
-const initialState = {
+const initialState: MoviesInitialState = {
   netflixOriginals: [],
   trending: [],
   topRated: [],
-  action: [],
+  actions: [],
   comedy: [],
   horror: [],
   romance: [],
@@ -15,5 +17,12 @@ export const MoviesSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {},
-  extraReducers: (builder) => {}
+  extraReducers: (builder) => {
+    builder.addCase(getMovies.fulfilled, (state, action) => {
+      for (let item in action.payload) {
+        const name: keyof MoviesInitialState = item;
+        state[name] = action.payload[name];
+      }
+    });
+  }
 });

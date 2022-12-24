@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { requests, baseURL } from "utils/constants";
 
-export async function fetchMovies(url: string) {
+async function fetchMovies(url: string) {
   const data = await fetch(baseURL + url).then((r) => r.json());
   return data.results;
 }
@@ -15,10 +15,10 @@ export const getMovies = createAsyncThunk("movies/getMovies", async () => {
       if (e instanceof Error) {
         console.log(e.message);
       }
+      return [key, e];
     }
   });
-  // na chto pomenyat any?????????
-  const results: any[] = await Promise.all(responses);
-  console.log(results);
+
+  const results = await Promise.all(responses);
   return Object.fromEntries(results);
 });

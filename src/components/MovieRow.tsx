@@ -8,6 +8,7 @@ const Row = styled.div`
   align-items: center;
   justify-content: start;
   gap: 10px;
+  margin-left: 10px;
   padding: 10px 0px;
   overflow-x: scroll;
   -ms-overflow-style: none;
@@ -23,9 +24,8 @@ interface TitleProps {
 }
 
 const Title = styled.h3<TitleProps>`
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
   ${(props) =>
     props.uppercase &&
     css`

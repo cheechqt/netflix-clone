@@ -1,6 +1,7 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const baseURL = "https://api.themoviedb.org/3";
+export const baseImgURL = "https://image.tmdb.org/t/p/original/";
 
 export const requests = {
   netflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
@@ -12,38 +13,3 @@ export const requests = {
   romance: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   documentary: `/discover/movie?api_key=${API_KEY}&with_genres=99`
 };
-
-export const sections = [
-  {
-    title: "Netflix Originals",
-    section: "netflixOriginals"
-  },
-  {
-    title: "Trending",
-    section: "trending"
-  },
-  {
-    title: "Top Rated",
-    section: "topRated"
-  },
-  {
-    title: "Action",
-    section: "actions"
-  },
-  {
-    title: "Comedy",
-    section: "comedy"
-  },
-  {
-    title: "Horror",
-    section: "horror"
-  },
-  {
-    title: "Romance",
-    section: "romance"
-  },
-  {
-    title: "Documentary",
-    section: "documentary"
-  }
-];

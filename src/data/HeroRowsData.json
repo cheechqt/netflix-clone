@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Netflix Originals",
+    "section": "netflixOriginals"
+  },
+  {
+    "title": "Trending Now",
+    "section": "trending"
+  },
+  {
+    "title": "Top Rated",
+    "section": "topRated"
+  },
+  {
+    "title": "Action",
+    "section": "actions"
+  },
+  {
+    "title": "Comedy",
+    "section": "comedy"
+  },
+  {
+    "title": "Horror",
+    "section": "horror"
+  },
+  {
+    "title": "Romance",
+    "section": "romance"
+  },
+  {
+    "title": "Documentary",
+    "section": "documentary"
+  }
+]

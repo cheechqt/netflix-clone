@@ -1,7 +1,7 @@
 import { MovieRow } from "components/MovieRow";
 import { FC } from "react";
 import styled from "styled-components";
-import { sections } from "utils/constants";
+import sections from "data/HeroRowsData.json";
 
 const HeroWrapper = styled.div`
   padding: 0 15px;

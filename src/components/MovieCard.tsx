@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Movie } from "types";
+import { baseImgURL } from "utils/constants";
 
 const StyledImage = styled.img`
   width: 200px;
@@ -14,7 +15,6 @@ const StyledImage = styled.img`
 `;
 
 export const MovieCard: FC<Movie> = (props) => {
-  const baseImgURL = "https://image.tmdb.org/t/p/original/";
   return (
     <Link to={`/watch/${props.id}`}>
       <StyledImage src={baseImgURL + props.poster_path} alt="movie poster" />

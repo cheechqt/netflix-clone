@@ -5,11 +5,13 @@ import { getMovies } from "store/reducers/getMovies";
 import { Hero } from "pages/Hero";
 import { Route, Routes } from "react-router-dom";
 import { Nav } from "components/Nav";
+import { Banner } from "components/Banner";
 
 const AppWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background: darkcyan;
+  background: #0f0f0f;
+  color: #e6e6e6;
 `;
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
   return (
     <AppWrapper>
       <Nav />
+      <Banner />
       <Routes>
         <Route path="/" element={<Hero />} />
         {/* <Route path="/watch/:id" element={<Watch />} /> */}

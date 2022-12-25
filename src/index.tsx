@@ -13,6 +13,21 @@ const Global = createGlobalStyle`
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+button {
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
 `;
 
 const root = ReactDOM.createRoot(
